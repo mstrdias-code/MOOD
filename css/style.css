@@ -1,0 +1,110 @@
+/* Общие стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Заголовок сайта */
+header {
+  background: url('images/hero-food.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 64px;
+  background: rgba(0,0,0,0.6);
+  padding: 20px 40px;
+  border-radius: 12px;
+}
+
+/* Меню навигации */
+nav {
+  background: #000;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff9900;
+}
+
+/* Секции сайта */
+section {
+  padding: 60px 10%;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Меню */
+.menu-category {
+  margin-bottom: 40px;
+}
+
+.menu-item {
+  margin-bottom: 15px;
+}
+
+.menu-item span {
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* Галерея */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Контакты */
+.contact-box {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* Футер */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #aaa;
+}

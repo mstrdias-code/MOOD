@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>MOOD — уютная кофейня</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b2f2f;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+  /* Фоновое фото — интерьер кофейни */
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('images/interior1.jpg') center/cover no-repeat;
+  
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: background 0.5s ease-in-out;
+}
+
+header h1 {
+  font-size: 64px;
+  color: #fff;
+  background: rgba(0,0,0,0.5); /* затемнение под текст */
+  padding: 20px 40px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+    nav {
+      background: #000;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 10%;
+    }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #444;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .menu-category {
+      margin-bottom: 40px;
+    }
+    .menu-item {
+      margin-bottom: 15px;
+    }
+    .menu-item span {
+      color: #bbb;
+      font-size: 14px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .contact-box {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MOOD</h1>
+</header>
+
+<nav>
+  <a href="#menu">Меню</a>
+  <a href="#about">О нас</a>
+  <a href="#gallery">Интерьер</a>
+  <a href="#contact">Контакты</a>
+</nav>
+
+<section id="menu">
+  <h2>Меню</h2>
+
+  <!-- Завтраки -->
+  <div class="menu-category">
+    <h3>Завтраки</h3>
+    <div class="gallery">
+      <div class="menu-item">
+        <img src="images/menu/breakfast/oatmeal-fruits.jpg" alt="Овсянка с фруктами">
+        <h4>Овсянка с фруктами — 1500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/fried-eggs.jpg" alt="Яичница (2 яйца)">
+        <h4>Яичница (2 яйца) — 1700 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/cheese-omelette.jpg" alt="Омлет с сыром">
+        <h4>Омлет с сыром — 1800 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/rice-porridge.jpg" alt="Рисовая каша на молоке">
+        <h4>Рисовая каша на молоке — 1600 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/pancakes-honey.jpg" alt="Блины с мёдом">
+        <h4>Блины с мёдом — 1900 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/syrniki-sourcream.jpg" alt="Сырники со сметаной">
+        <h4>Сырники со сметаной — 1800 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/yogurt-granola.jpg" alt="Йогурт с гранолой">
+        <h4>Йогурт с гранолой — 1700 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/toast-egg-cheese.jpg" alt="Тост с яйцом и сыром">
+        <h4>Тост с яйцом и сыром — 2000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/chicken-sandwich.jpg" alt="Сэндвич с курицей">
+        <h4>Сэндвич с курицей — 2200 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/breakfast/croissant-jam.jpg" alt="Круассан с джемом">
+        <h4>Круассан с джемом — 1500 ₸</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Обеды -->
+  <div class="menu-category">
+    <h3>Обеды</h3>
+    <div class="gallery">
+      <div class="menu-item">
+        <img src="images/menu/lunch/lentil-soup.jpg" alt="Суп из чечевицы">
+        <h4>Суп из чечевицы — 2500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/chicken-soup.jpg" alt="Куриный суп">
+        <h4>Куриный суп — 2500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/pelmeni-sourcream.jpg" alt="Пельмени со сметаной">
+        <h4>Пельмени со сметаной — 3000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/homestyle-roast.jpg" alt="Домашняя жаркое">
+        <h4>Домашняя жаркое — 4000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/chicken-meatballs-rice.jpg" alt="Куриные тефтели с рисом">
+        <h4>Куриные тефтели с рисом — 3500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/rice-chicken-vegetables.jpg" alt="Рис с курицей и овощами">
+        <h4>Рис с курицей и овощами — 3000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/beef-goulash.jpg" alt="Говяжий гуляш">
+        <h4>Говяжий гуляш — 4500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/chicken-cream-sauce.jpg" alt="Курица в сливочном соусе">
+        <h4>Курица в сливочном соусе — 4000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/beef-stroganoff-mash.jpg" alt="Бефстроганов с картофельным пюре">
+        <h4>Бефстроганов с картофельным пюре — 5000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/lunch/kebab-lavash.jpg" alt="Кебаб с лавашем">
+        <h4>Кебаб с лавашем — 3500 ₸</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ужины -->
+  <div class="menu-category">
+    <h3>Ужины</h3>
+    <div class="gallery">
+      <div class="menu-item">
+        <img src="images/menu/dinner/vegetable-omelette.jpg" alt="Овощной омлет">
+        <h4>Овощной омлет — 1800 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/cream-soup.jpg" alt="Крем-суп">
+        <h4>Крем-суп — 2000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/baked-potatoes.jpg" alt="Запечённый картофель">
+        <h4>Запечённый картофель — 2500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/rice-vegetables.jpg" alt="Рис с овощами">
+        <h4>Рис с овощами — 2500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/pasta-sauce.jpg" alt="Паста с соусом">
+        <h4>Паста с соусом — 3000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/chicken-vegetables.jpg" alt="Курица с овощами">
+        <h4>Курица с овощами — 4000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/warm-meat-salad.jpg" alt="Тёплый мясной салат">
+        <h4>Тёплый мясной салат — 4200 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/chicken-steak.jpg" alt="Куриный стейк">
+        <h4>Куриный стейк — 4500 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/steamed-fish.jpg" alt="Рыба на пару">
+        <h4>Рыба на пару — 5000 ₸</h4>
+      </div>
+      <div class="menu-item">
+        <img src="images/menu/dinner/baked-fish-garnish.jpg" alt="Запечённая рыба с гарниром">
+        <h4>Запечённая рыба с гарниром — 5500 ₸</h4>
+      </div>
+    </div>
+  </div>
+  <!-- Напитки -->
+<div class="menu-category">
+  <h3>Напитки</h3>
+  <div class="gallery">
+    <div class="menu-item">
+      <img src="images/menu/drinks/americano.jpg" alt="Американо">
+      <h4>Американо — 1500 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/espresso.jpg" alt="Эспрессо">
+      <h4>Эспрессо — 1400 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/cappuccino.jpg" alt="Капучино">
+      <h4>Капучино — 1800 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/flat-white.jpg" alt="Флэт Уайт">
+      <h4>Флэт Уайт — 1800 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/latte.jpg" alt="Латте">
+      <h4>Латте — 1800 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/tea.jpg" alt="Чай">
+      <h4>Чай — 1200 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/green-tea.jpg" alt="Зелёный чай">
+      <h4>Зелёный чай — 1300 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/herbal-tea.jpg" alt="Травяной чай">
+      <h4>Травяной чай — 1300 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/mint-tea.jpg" alt="Мятный чай">
+      <h4>Мятный чай — 1300 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/juice.jpg" alt="Апельсиновый сок">
+      <h4>Апельсиновый сок — 1300 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/apple-juice.jpg" alt="Яблочный сок">
+      <h4>Яблочный сок — 1300 ₸</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/drinks/mango-juice.jpg" alt="Манговый сок">
+      <h4>Манговый сок — 1500 ₸</h4>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<section id="about">
+  <h2>О нас</h2>
+  <p>MOOD — это уютная кофейня с акцентом на атмосферу, эстетику и вкус. Мы готовим завтраки, обеды и ужины из свежих ингредиентов и создаём настроение для каждого гостя.</p>
+</section>
+
+<section id="gallery">
+  <h2>Интерьер</h2>
+  <div class="gallery">
+    <div class="menu-item">
+      <img src="images/interior1.jpg" alt="Общий зал">
+      <h4>Общий зал</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/interior2.jpg" alt="Барная зона / кофейная стойка">
+      <h4>Барная зона / кофейная стойка</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/interior3.jpg" alt="Уютный уголок / столик у окна">
+      <h4>Уютный уголок / столик у окна</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/interior4.jpg" alt="Декор / детали интерьера">
+      <h4>Декор / детали интерьера</h4>
+    </div>
+    <div class="menu-item">
+      <img src="images/interior5.jpg" alt="Освещение / свет / общий план сверху">
+      <h4>Освещение / свет / общий план сверху</h4>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="contact">
+  <h2>Контакты</h2>
+  <div class="contact-box">
+    <p><strong>Адрес:</strong> г. пр-т. Мангилик Ел. 56, Астана </p>
+    <p><strong>График работы:</strong> ежедневно 08:00 – 23:00</p>
+    <p><strong>Телефон:</strong> +7 (777) 123-45-67</p>
+    <p><strong>Соцсети:</strong> Instagram / TikTok @mood.cafe</p>
+    <p><strong>Карта:</strong></p>
+  <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.123456789!2d71.430000!3d51.160000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424587c123456789%3A0xabcdef1234567890!2z0JrQsNC70YzQvdC40Y8!5e0!3m2!1sru!2skz!4v1671234567890!5m2!1sru!2skz"
+  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 MOOD Coffee. All rights reserved.
+</footer>
+
+</body>
+</html>
